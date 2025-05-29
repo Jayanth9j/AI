@@ -1,25 +1,25 @@
 Probability
-Random Experiment - A experiment where can't predict the outcomes 
+Random Experiment - A experiment where we can't predict the outcome due to various possible outcomes
 Example- Before watching a movie and trying to predict how it ends 
 Random Variable - It assigns a numerical value to the outcome 
 Basic Outcome - Final outcome which we get Ex- Happy ending hero alive 
-Population - All the possibles outcomes 
+Population - Entire set of items 
 Example- Generally how any movie ends
-Sample space - A subset of all the outcomes 
-Example- Endings of a movie in that genre 
+Sample space - A set of all the possible outcomes 
+Example- Endings of a movie(sad,melo,happy,angry,) 
 Event - type of outcome which we want to achieve which is a subset of sample space 
 Example- Movie ends with hero's death
-Discrete Random Variable - It can be a finite or complete number 
+Discrete Random Variable - It is a countable value
 Example- whether my prediction right or wrong (0/1) 
-Contnious Random Variable - It can be a finite number with infinite values 
+Contnious Random Variable - It can be a finite number with infinite values in a given range 
 Example- movie rating 
-Probability Mass Function - it is for each specific outcome (discrete random variable) 
+Probability Mass Function -Function which gives probability for possible outcomes (discrete random variable) 
 Example- whether my prediction is right or wrong do it 50 times and i was 20 times correct 
-Probability Density Function - it is between a interval (continous random variable) 
+Probability Density Function - Function which gives probability in a range (continous random variable) 
 Example- generally i give movie rating of avg 7 and trying to predict whether the rating for this will be in that range  
-Probability Discrete Distribution - probabilties for all the possible outcomes 
+Probability Discrete Distribution -distribution which gives probabilties for all the possible outcomes 
 Example- my prediction right or wrong (0/1) P(1)-0.5 P(0)-0.5 always equal to 1 
-Probability Continous Distribution - probabilty of continous variable in a certain range 
-Example- my rating whether it is between 6<X<8 or X=7  
-Cummilative Distributive Function - tells cumilative probability up to the point 
-Example- trying to find probablity of my movie rating less than 5 to equal to 9 P(5<x<9)
+Probability Continous Distribution -distribution which gives probabilty of continous variable in a certain intervals
+Example- my rating whether it is between 6<X<8 
+Cummilative Distributive Function - probability that a variable is less than or equal to a certain value 
+Example- trying to find probablity of my movie rating less than or equal to 7 P(5<x<7)
