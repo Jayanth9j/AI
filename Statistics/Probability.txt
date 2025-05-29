@@ -1,0 +1,14 @@
+Probability
+Random Experiment - A experiment where can't predict the outcomes Ex- Before watching a movie and trying to predict how it ends 
+Random Variable - It assigns a numerical value to the outcome 
+Basic Outcome - Final outcome which we get Ex- Happy ending hero alive 
+Population - All the possibles outcomes Ex- Generally how any movie ends
+Sample space - A subset of all the outcomes Ex- Endings of a movie in that genre 
+Event - type of outcome which we want to achieve which is a subset of sample space Ex- Movie ends with hero's death
+Discrete Random Variable - It can be a finite or complete number Ex- whether my prediction right or wrong (0/1) 
+Contnious Random Variable - It can be a finite number with infinite values Ex- movie rating 
+Probability Mass Function - it is for each specific outcome (discrete random variable) Ex- whether my prediction is right or wrong do it 50 times and i was 20 times correct 
+Probability Density Function - it is between a interval (continous random variable) Ex- generally i give movie rating of avg 7 and trying to predict whether the rating for this will be in that range  
+Probability Discrete Distribution - probabilties for all the possible outcomes Ex- my prediction right or wrong (0/1) P(1)-0.5 P(0)-0.5 always equal to 1 
+Probability Continous Distribution - probabilty of continous variable in a certain range Ex- my rating whether it is between 6<X<8 or X=7  
+Cummilative Distributive Function - tells cumilative probability up to the point Ex- trying to find probablity of my movie rating less than 5 to equal to 9 P(5<x<9)
