@@ -3,7 +3,7 @@ Set Theory
 Collection - It contains random elements 
 Example- All movies
 Set - It contains well defined elements 
-Example- All Activo genre movies
+Example- All Action genre movies
 Conditional Probability - It means the probability of an event occuring based on another event which has already occured
 Example - i will mi 8 movie if the review is 8.1
 Expected Value - Average of outcomes of random variables over time (in case of discrete variables it is generally mean)
