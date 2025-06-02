@@ -1,0 +1,46 @@
+Linear Equation & Matrix & Vectors
+
+Linear Equation - An equation in which the highest power of all variables is 1(the graph is always a straight line)
+Example - y=mx+c 
+Multiple Linear Equation - two linear equations with two unknowns
+Example - 2x+3y = 7 & x-y =4
+When doing an PCA(eigen values) or calculating regression coefficients linear equations are solved by machine to get whether important features(PCA) or the coefficients. 
+
+Matrix - An array of numbers shaped in a recantuglar arrangament 
+Null Matrix - A matrix which has only zero as all its elements
+Transpose Matrix - Changing rows to columns and columns to rows(A^T)
+Determinant - A value that can be calculated from a square matrix
+Determinant of a 2x2 matrix - ad-bc
+Inverse Matrix - For every square matrix there exists a inverse matrix which satisfies this condition AA^-1 = I
+Identity Matrix - A matrix which has 1 on it's diagonal and elsewhere 0(I)
+Symmetric Matrix - A matrix when transposed same then it is a symmetric matrix (A^T = A)
+Scalar Matrix - A matrix which has same number on(except 0) it's diagonal and elsewhere 0
+Skew Symmetric Matrix - A matrix when transposed same as negative of the matrix itself   (A^T = -A)
+Data is generally stored in a matrix format 
+
+Vector - It is a object of any type that has both length and direction (or) any quantity that can be added to it's same kind and scaled by a number  
+Vector Space - It has both both vectors and scalars where vectors can be added to give new vectors and scaled by scalars to give shorter or longer vectors 
+Example it has u,v vectors and 1,2 scalars then w=u+v and 2u is a vector where it is in same direction as u but it has double the length.
+a,b,c are 3 vectors and d,e are 2 scalars 
+Vector Addition - Adding two or more vectors to get a new vector a+b
+Scalar Multiplication - Multiplying a vector by a scalar to get a new vector 2a
+Vector Subtraction - Subtracting two or more vectors to get a new vector a-b
+Vector Dot Product - Multiplying two vectors to get a scalar a.b
+Vector Cross Product - Multiplying two vectors to get a vector a x b
+Commutative Law - a+b = b+a
+Associative Law - (a+b)+c = a+(b+c)
+Distributive Law - a(b+c) = ab+ac
+Additive Inverse - a + (-a) = 0
+Angle between vectors - It can be calculated by using dot product o = cos^-1 ((a.b)/|a||b|)
+Distance between vectors - It can be calculated by using v1(x1,y1) & v2(x2,y2) 
+v = ((x1-x2),(y1-y2)) and d = |v|=Sqrt((x1-x2)^2+(y1-y2)^2)
+
+Linear Independence - Two vectors can be said to independent if we can't get one vector by adding or scaling the other vector 
+Basis - 
+Rank - No of linearlly independent rows or columns in a matrix (It is also no of non zero rows in a matrix's row echelon form )
+
+Eigen Vector- a vector when any tranformation done with a matrix doesn't change it's direction only it's length either increased or decreased
+Eigen Value- a scalar value which tells how much length the eigen vector increased or decreased
+
+Example - In Healthcare Analytics we use PCA where first we get a covariance matrix from patient data and we get eigen vectors of that matrix to identify principal components or important features with strong direction .
+When we are doing a body checkup or else for a disease and we need to do around 50 tests for 1000 but using pca we can find out which among the 50 can cover most variance i.e electrolytes balance shift blood &platelets test and inflammation marker pattern so we can use these 3 instead of 50 tests which shall reduce the overall dimensionallity.
