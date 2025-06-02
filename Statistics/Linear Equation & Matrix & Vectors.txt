@@ -36,7 +36,7 @@ Distance between vectors - It can be calculated by using v1(x1,y1) & v2(x2,y2)
 v = ((x1-x2),(y1-y2)) and d = |v|=Sqrt((x1-x2)^2+(y1-y2)^2)
 
 Linear Independence - Two vectors can be said to independent if we can't get one vector by adding or scaling the other vector 
-Basis - 
+Basis - A set of linearlly independent vectors from which we can get any other vector in that vector space 
 Rank - No of linearlly independent rows or columns in a matrix (It is also no of non zero rows in a matrix's row echelon form )
 
 Eigen Vector- a vector when any tranformation done with a matrix doesn't change it's direction only it's length either increased or decreased
