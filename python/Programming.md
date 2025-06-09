@@ -125,11 +125,13 @@ print(result)            # Outputs: 12
 ```
 - **Positional arguments**
   Passed to a function in order, matching the parameters by position. 
-  Example -  ```python
+  Example -
+  ```python
   def func(a, b):
       return a + b
 
   func(1, 2)  # 1→a, 2→b
+  ```
 
 -**Keyword arguments** - Passed by explicitly naming the parameter, order doesn’t matter.
 func(b=2, a=1)
@@ -145,10 +147,11 @@ greet()         # uses default "World"
 greet("Alice")  # overrides with "Alice"
 ```
 Variable-length positional arguments (*args) - Collects any number of extra positional arguments into a tuple.
+
 Variable-length keyword arguments (**kwargs) - Collects any number of extra keyword arguments into a dict.
 Example - 
 ```
-]def my_function(name, age=30, *hobbies, **details):
+def my_function(name, age=30, *hobbies, **details):
     print(f"Name: {name}, Age: {age}")
     print(f"Hobbies: {hobbies}")
     print(f"Details: {details}")
