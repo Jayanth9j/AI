@@ -76,7 +76,7 @@ Packages
     total = a + b
     return total
 
-# Using the function:
+Using the function:
 x = 5
 y = 7
 print(add_numbers(x, y))  # Outputs: 12
@@ -122,7 +122,7 @@ def multiply(x, y):    # x and y are parameters
 
 result = multiply(3, 4)  # 3 and 4 are arguments
 print(result)            # Outputs: 12
-
+```
 - **Positional arguments**
   Passed to a function in order, matching the parameters by position. 
   Example -  ```python
@@ -137,16 +137,18 @@ func(b=2, a=1)
 Default (optional) arguments - Parameters given a default value in the function signature; callers can omit them.
 
 Example - 
+```
 def greet(name="World"):
     print(f"Hello, {name}!")
 
 greet()         # uses default "World"
 greet("Alice")  # overrides with "Alice"
-
+```
 Variable-length positional arguments (*args) - Collects any number of extra positional arguments into a tuple.
 Variable-length keyword arguments (**kwargs) - Collects any number of extra keyword arguments into a dict.
 Example - 
-def my_function(name, age=30, *hobbies, **details):
+```
+]def my_function(name, age=30, *hobbies, **details):
     print(f"Name: {name}, Age: {age}")
     print(f"Hobbies: {hobbies}")
     print(f"Details: {details}")
@@ -157,6 +159,7 @@ my_function("Alice", 25, "reading", "hiking", city="New York", occupation="Engin
 age=25 overrides the default value for the age parameter.
 "reading" and "hiking" are arbitrary positional arguments stored in the hobbies tuple.
 city="New York" and occupation="Engineer" are arbitrary keyword arguments stored in the details dictionary.
+```
 
 What is Data Structure - Data Stored in a Structured way for efficiency. 
 
