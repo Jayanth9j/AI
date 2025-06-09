@@ -25,6 +25,3 @@ Shortest Path Between Nodes - It is nothing but the path with least number of ed
 
 Eigen Vector Centrality - It measures the nodes it connected to and their importance(quality of connections) 
 Example - if two nodes have same degree and among them one is connected to a node with higher degree than both of them then the this node can be higher than the another node.
-
-
-git
