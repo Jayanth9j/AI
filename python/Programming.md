@@ -4,39 +4,31 @@ What is Programming - It is nothing but a set of instructions written that tells
 
 Why use Pyhton compared to other languages - It has many benefits 1. It has built in packages 2. It is super compatible with ML Algorithms and It is easy to read similar to Natural Language.
 
-Packages
-- **NumPy** – Fundamental package for numerical computing in Python; provides the n-dimensional array object and fast operations on arrays.
-- **Pandas** – Library for data manipulation and analysis; introduces the DataFrame for working with tabular data.
-- **Matplotlib** – 2D plotting library for creating static, interactive, and animated visualizations in Python.
-- **Scikit-learn** – Machine learning library with tools for classification, regression, clustering, dimensionality reduction, and model selection.
-- **TensorFlow** – End-to-end open-source platform for machine learning and deep learning, developed by Google.
-- **PyTorch** – Deep learning framework that emphasizes flexibility and speed, with dynamic computation graphs and strong Python integration.
-- **Keras** – High-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano.
-- **Seaborn** – Statistical data visualization library built on Matplotlib; provides a high-level interface for drawing attractive and informative graphics.
+### Python Packages
 
-- **Arithmetic operations** – perform mathematical calculations  
-  - `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), `%` (modulus), `**` (exponentiation), `//` (floor division)
+| Package      | Description                                                                                          |
+|--------------|------------------------------------------------------------------------------------------------------|
+| **NumPy**    | Fundamental package for numerical computing: provides the n-dimensional array object and fast array ops. |
+| **Pandas**   | Data manipulation & analysis library: introduces the DataFrame for working with tabular data.       |
+| **Matplotlib** | 2D plotting library for creating static, interactive, and animated visualizations.               |
+| **Scikit-learn** | Machine-learning toolbox for classification, regression, clustering, dimensionality reduction, etc. |
+| **TensorFlow**  | End-to-end deep-learning platform by Google for building and training neural networks.            |
+| **PyTorch**     | Flexible deep-learning framework with dynamic computation graphs and strong Python integration.  |
+| **Keras**       | High-level neural-networks API running on top of TensorFlow, CNTK, or Theano.                    |
+| **Seaborn**     | Statistical data-viz library built on Matplotlib; offers a high-level interface for attractive plots. |
 
-- **Comparison (conditional) operations** – compare values and yield true/false  
-  - `==` (equal), `!=` (not equal), `>` (greater than), `<` (less than), `>=` (greater than or equal), `<=` (less than or equal)
+### Common Python Operation Types
 
-- **Logical operations** – combine boolean expressions  
-  - `and`, `or`, `not`
-
-- **Assignment operations** – assign or update variable values  
-  - `=` (simple assignment), `+=`, `-=`, `*=`, `/=`, `%=`, `**=`, `//=`
-
-- **Bitwise operations** – operate on the binary representations of integers  
-  - `&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (left shift), `>>` (right shift)
-
-- **Membership operations** – test for element membership in collections  
-  - `in`, `not in`
-
-- **Identity operations** – test object identity  
-  - `is`, `is not`
-
-- **Ternary (conditional) expression** – shorthand for simple if-else  
-  - `result = x if condition else y`
+| Operation Category             | Description                                         | Symbols / Examples                                              |
+|--------------------------------|-----------------------------------------------------|-----------------------------------------------------------------|
+| **Arithmetic**                 | Mathematical calculations                           | `+`, `-`, `*`, `/`, `%`, `**`, `//`                            |
+| **Comparison (conditional)**   | Value comparisons yielding Boolean results          | `==`, `!=`, `>`, `<`, `>=`, `<=`                               |
+| **Logical**                    | Combine Boolean expressions                         | `and`, `or`, `not`                                             |
+| **Assignment**                 | Assign or update variable values                    | `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `**=`, `//=`                |
+| **Bitwise**                    | Operations on integer bit patterns                  | `&`, `|`, `^`, `~`, `<<`, `>>`                                 |
+| **Membership**                 | Test element membership in a collection             | `in`, `not in`                                                 |
+| **Identity**                   | Test object identity (same object in memory)        | `is`, `is not`                                                 |
+| **Ternary (conditional) expr.**| Shorthand if-else producing one of two values       | `result = x if condition else y`                              |
 
 - **Terminal (Oval)**  
   Represents the beginning or end of a process.  
@@ -122,33 +114,15 @@ def multiply(x, y):    # x and y are parameters
 
 result = multiply(3, 4)  # 3 and 4 are arguments
 print(result)            # Outputs: 12
-```
-- **Positional arguments**
-  Passed to a function in order, matching the parameters by position. 
-  Example -
-  ```python
-  def func(a, b):
-      return a + b
 
-  func(1, 2)  # 1→a, 2→b
-  ```
+| Argument Type                            | Definition                                                                                  | Example                                 |
+|------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------|
+| **Positional arguments**                 | Passed in order, matching the parameters by position.                                       | `func(1, 2)` → `a=1`, `b=2`              |
+| **Keyword arguments**                    | Passed by naming the parameter explicitly; order doesn’t matter.                            | `func(b=2, a=1)`                        |
+| **Default (optional) arguments**         | Parameters with a default value in the signature; callers may omit them.                    | `greet()` → uses default `name="World"` |
+| **Variable-length positional (`*args`)** | Gathers extra positional arguments into a tuple.                                            | `sum_all(1, 2, 3)` → `args=(1,2,3)`     |
+| **Variable-length keyword (`**kwargs`)** | Gathers extra keyword arguments into a dict.                                                | `print_attrs(x=10, y=20)` → `kwargs={…}` |
 
--**Keyword arguments** - Passed by explicitly naming the parameter, order doesn’t matter.
-func(b=2, a=1)
-
-Default (optional) arguments - Parameters given a default value in the function signature; callers can omit them.
-
-Example - 
-```
-def greet(name="World"):
-    print(f"Hello, {name}!")
-
-greet()         # uses default "World"
-greet("Alice")  # overrides with "Alice"
-```
-Variable-length positional arguments (*args) - Collects any number of extra positional arguments into a tuple.
-
-Variable-length keyword arguments (**kwargs) - Collects any number of extra keyword arguments into a dict.
 Example - 
 ```
 def my_function(name, age=30, *hobbies, **details):
@@ -184,7 +158,7 @@ What is Data Structure - Data Stored in a Structured way for efficiency.
 | **`frozenset`** | `frozenset([1, 2, 3])`  |
 | **`str`**       | `"hello world"`         |
 
-- ** JSON File Key–Value Pairs**  
+- ** JSON FileKey–Value Pairs**  
   - **Key**  
     - Always a string  
     - Defines an attribute or property  
