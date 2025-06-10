@@ -114,17 +114,21 @@ def multiply(x, y):    # x and y are parameters
 
 result = multiply(3, 4)  # 3 and 4 are arguments
 print(result)            # Outputs: 12
-
-| Argument Type                            | Definition                                                                                  | Example                                 |
-|------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------|
-| **Positional arguments**                 | Passed in order, matching the parameters by position.                                       | `func(1, 2)` → `a=1`, `b=2`              |
-| **Keyword arguments**                    | Passed by naming the parameter explicitly; order doesn’t matter.                            | `func(b=2, a=1)`                        |
-| **Default (optional) arguments**         | Parameters with a default value in the signature; callers may omit them.                    | `greet()` → uses default `name="World"` |
-| **Variable-length positional (`*args`)** | Gathers extra positional arguments into a tuple.                                            | `sum_all(1, 2, 3)` → `args=(1,2,3)`     |
-| **Variable-length keyword (`**kwargs`)** | Gathers extra keyword arguments into a dict.                                                | `print_attrs(x=10, y=20)` → `kwargs={…}` |
-
-Example - 
 ```
+
+### Argument Types and Examples
+
+| Argument Type                            | Definition                                                           | Example                                 |
+|------------------------------------------|----------------------------------------------------------------------|-----------------------------------------|
+| **Positional arguments**                 | Passed in order, matching the parameters by position.                | `func(1, 2)` → `a=1`, `b=2`              |
+| **Keyword arguments**                    | Passed by naming the parameter explicitly; order doesn’t matter.     | `func(b=2, a=1)`                        |
+| **Default (optional) arguments**         | Parameters with a default value in the signature; callers may omit.  | `greet()` → uses default `name="World"` |
+| **Variable-length positional (`*args`)** | Gathers extra positional arguments into a tuple.                     | `sum_all(1, 2, 3)` → `args=(1,2,3)`     |
+| **Variable-length keyword (`**kwargs`)** | Gathers extra keyword arguments into a dict.                         | `print_attrs(x=10, y=20)` → `kwargs={…}` |
+
+
+### Example - 
+```python
 def my_function(name, age=30, *hobbies, **details):
     print(f"Name: {name}, Age: {age}")
     print(f"Hobbies: {hobbies}")
@@ -138,8 +142,10 @@ age=25 overrides the default value for the age parameter.
 city="New York" and occupation="Engineer" are arbitrary keyword arguments stored in the details dictionary.
 ```
 
+
 What is Data Structure - Data Stored in a Structured way for efficiency. 
 
+### Data Structures 
 | Data Structure  | Definition                                                   | Duplicates Allowed?     | Ordered?              | Mutable? | Immutable? |
 | --------------- | ------------------------------------------------------------ | ----------------------- | --------------------- | -------- | ---------- |
 | **`list`**      | A sequence of items in a defined order, accessed by index.   | Yes                     | Yes                   | Yes      | No         |
@@ -157,6 +163,7 @@ What is Data Structure - Data Stored in a Structured way for efficiency.
 | **`set`**       | `{1, 2, 3}`             |
 | **`frozenset`** | `frozenset([1, 2, 3])`  |
 | **`str`**       | `"hello world"`         |
+```
 
 - ** JSON FileKey–Value Pairs**  
   - **Key**  
@@ -173,8 +180,8 @@ What is Data Structure - Data Stored in a Structured way for efficiency.
 - **Use Case**  
   - Common format for data exchange in web APIs and configuration files
 
----
 
+```
 ### Example
 
 ```json
