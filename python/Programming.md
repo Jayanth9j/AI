@@ -144,7 +144,7 @@ city="New York" and occupation="Engineer" are arbitrary keyword arguments stored
 
 
 What is Data Structure - Data Stored in a Structured way for efficiency. 
-
+Mutable objects allow their values to be modified, while immutable objects remain unchanged once created. 
 ### Data Structures 
 | Data Structure  | Definition                                                   | Duplicates Allowed?     | Ordered?              | Mutable? | Immutable? |
 | --------------- | ------------------------------------------------------------ | ----------------------- | --------------------- | -------- | ---------- |
