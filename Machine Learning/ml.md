@@ -130,7 +130,15 @@ Labels + Unsupervised ≠ Classification. You can leverage unsupervised for feat
 
 5. ## Feature Engineering -
 
-Feature Engineering = Feature Generation + Feature Selection
+Feature Engineering is a broad process that includes:
+1️⃣ Feature Generation (or Extraction) — creating new features from existing data or external sources.
+→ Example: debt-to-income ratio, day-of-week from date, PCA components.
+
+2️⃣ Feature Transformation — scaling, encoding, normalizing, etc., to make features suitable for models.
+→ Example: log-transform skewed income, standardize BMI.
+
+3️⃣ Feature Selection — choosing the most relevant features and removing irrelevant or redundant ones.
+→ Example: drop highly correlated features, keep top 20 most important based on tree importance.
 
 ### Feature Generation - 
 
@@ -230,3 +238,30 @@ Tree-based feature importance (e.g., in Random Forest, XGBoost)
 
 Start with filter methods to quickly eliminate irrelevant or redundant features → then fine-tune with embedded or wrapper methods for your chosen model.
 
+Look at both the feature type and the model assumptions you expect to use.
+
+| Feature Type    | When to scale?                                                  | When to encode?                               | When to extract?                    |
+| --------------- | --------------------------------------------------------------- | --------------------------------------------- | ----------------------------------- |
+| **Numerical**   | If model is sensitive to scale (e.g., logistic regression, SVM) | ❌ N/A                                         | Only if deriving new features       |
+| **Categorical** | ❌                                                               | Always → one-hot, ordinal, or target encoding | Group rare categories               |
+| **String/Text** | ❌                                                               | ❌                                             | Always → turn into numeric features |
+| **Time/Date**   | Sometimes (e.g., minutes since)                                 | ❌                                             | Often → extract trends, cyclicity   |
+
+### Feature Engineering Techniques by Feature Type
+
+| **Feature Type**                       | **Typical Techniques**                                                                                                                              | **Why?**                                                                                                                            |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| 🔢 **Numerical (continuous/discrete)** | - Scaling: StandardScaler, MinMaxScaler<br>- Binning (e.g., age → young/mid/old)<br>- Polynomial features, interactions<br>- Log/Box-Cox transforms | ✅ Many models assume features are on similar scales<br>✅ Binning can expose non-linear patterns<br>✅ Log transforms handle skewness |
+| 📊 **Categorical (nominal/ordinal)**   | - One-hot encoding<br>- Target (mean) encoding<br>- Ordinal encoding (if order exists)<br>- Group rare categories into “Other”                      | ✅ Converts text categories into numbers<br>✅ Can preserve order or group small categories                                           |
+| 🔤 **Text / String (unstructured)**    | - Word/character counts<br>- TF-IDF vectorization<br>- Word embeddings (Word2Vec, BERT)<br>- Sentiment scores                                       | ✅ Converts free text into meaningful numerical vectors for ML                                                                       |
+| 🕒 **Time / Date**                     | - Extract components: day, month, weekday<br>- Compute time since event<br>- Rolling averages, trends<br>- Cyclic encodings (sin/cos)               | ✅ Captures seasonality, recency effects, and periodic behavior                                                                      |
+| 📷 **Other (Images, Audio, etc.)**     | - Feature extraction with CNNs, MFCCs, etc.<br>- Use pre-trained embeddings<br>- Reduce dimensionality (e.g., PCA)                                  | ✅ Converts unstructured media into structured feature vectors                                                                       |
+
+
+| **Feature Type**                      | **Recommended Feature Selection Methods**                                                                                              |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| 🔢 **Numerical**                      | - Filter: Correlation with target<br>- Variance threshold (remove near-constant)<br>- Mutual information<br>- LASSO / embedded methods |
+| 📊 **Categorical**                    | - Filter: Chi-squared test<br>- Mutual information for categorical<br>- Target encoding + model importance                             |
+| 🔤 **Text / High-Dimensional Sparse** | - Embedded: L1 regularization (LASSO)<br>- Embedded: tree-based feature importance<br>- Dimensionality reduction (PCA on embeddings)   |
+| 🕒 **Time / Date**                    | - Domain-driven: extract meaningful time-based features first<br>- Then: model-based feature importance                                |
+| 📷 **Image / Audio / Unstructured**   | - Embedded: convolutional layers learn which parts matter<br>- Or: select components from embeddings                                   |
