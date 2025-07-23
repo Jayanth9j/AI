@@ -149,11 +149,14 @@ A word that appears more times in a document is more important for that document
 ## Inverse Document Frequency (IDF)
 Meaning - “How rare is term t across the entire corpus of N documents?”
 
-| Variant | Formula | Purpose |
-|---------|---------|---------|
-| **Basic** | \( \displaystyle \mathrm{idf}(t) = \log \frac{N}{df_t} \) | zero when \(df_t = N\) |
-| **Smoothed** | \( \displaystyle \mathrm{idf}_{\text{smooth}}(t) = \log\frac{1+N}{1+df_t}\;+\;1 \) | avoids div‑by‑zero, never 0 |
-| **Probabilistic** | \( \displaystyle \mathrm{idf}_{\text{prob}}(t) = \log\frac{N - df_t}{df_t} \) | used in BM25 family |
+| Variant          | Formula                                               | Purpose                               |
+|------------------|-------------------------------------------------------|---------------------------------------|
+| **Basic**        | `idf(t) = log(N / df_t)`                              | Zero when `df_t = N`.                 |
+| **Smoothed**     | `idf_smooth(t) = log((1 + N) / (1 + df_t)) + 1`       | Avoids div‑by‑zero, never 0.           |
+| **Probabilistic**| `idf_prob(t) = log((N - df_t) / df_t)`                | Used in BM25 family.                  |
+
+
+
 
 - Basic form: 𝑁 = total number of documents in corpus. df_t = number of documents that contain term t at least once.
 
@@ -167,9 +170,7 @@ Meaning - “How rare is term t across the entire corpus of N documents?”
 Multiply the two parts:TF and IDF. The result is a weight that measures how important a term is in a document,
 compared to other documents in the corpus i.e Product highlights terms that are both locally frequent and globally distinctive.
 
-\[
-w_{t,d} \;=\; \mathrm{tf}(t,d)\;\times\;\mathrm{idf}(t)
-\]
+`tfidf(t, d) = tf(t, d) * idf(t)`
 
 > After computing \(w_{t,d}\) for every term, libraries often **L2‑normalize** each document vector so cosine similarity is length‑agnostic.
 
