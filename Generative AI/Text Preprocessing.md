@@ -127,13 +127,13 @@ Automatically identifying and classifying “named” things in text into catego
 
 - Why we do it
 
- Customer feedback: gauge satisfaction from reviews, survey responses, social media
+  Customer feedback: gauge satisfaction from reviews, survey responses, social media
 
- Market research: track brand reputation over time
+  Market research: track brand reputation over time
 
- Public opinion: political sentiment, crisis management
+  Public opinion: political sentiment, crisis management
 
- Recommendation systems: personalize content by user mood
+  Recommendation systems: personalize content by user mood
 
 - How it ties together
 
