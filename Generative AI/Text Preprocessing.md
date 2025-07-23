@@ -127,27 +127,27 @@ Automatically identifying and classifying “named” things in text into catego
 
 - Why we do it
 
- - Customer feedback: gauge satisfaction from reviews, survey responses, social media
+ Customer feedback: gauge satisfaction from reviews, survey responses, social media
 
- - Market research: track brand reputation over time
+ Market research: track brand reputation over time
 
- - Public opinion: political sentiment, crisis management
+ Public opinion: political sentiment, crisis management
 
- - Recommendation systems: personalize content by user mood
+ Recommendation systems: personalize content by user mood
 
 - How it ties together
 
- - Preprocess (tokenize, lowercase, stem/lemmatize)
+  Preprocess (tokenize, lowercase, stem/lemmatize)
 
- - Features (Bag-of-Words, TF–IDF, embeddings)
+  Features (Bag-of-Words, TF–IDF, embeddings)
 
- - Enhancements
+- Enhancements
 
-  - Handle negation (“not happy”)
+  Handle negation (“not happy”)
 
-  - Incorporate punctuation intensity
+  Incorporate punctuation intensity
 
-  - Use NER to focus on target entities
+  Use NER to focus on target entities
 
 - Model (logistic regression, SVM, neural nets, transformers)
 
